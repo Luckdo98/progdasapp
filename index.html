@@ -5,6 +5,39 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  <!-- Event snippet for Page view conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18359022120/TLIACL2YwNocEKjkobJE',
+      'value': 1.0,
+      'currency': 'BRL'
+  });
+</script>
+
+
+<!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18359022120/TLIACL2YwNocEKjkobJE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
+
+
+  
   gtag('config', 'AW-18359022120');
 </script>
 
